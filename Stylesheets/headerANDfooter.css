@@ -62,7 +62,7 @@ body {
 }
 
 #preloaderText {
-  color: #66ffff;
+  color: red;
   font-size: 1.5vw;
   position: absolute;
   top: 65%;
