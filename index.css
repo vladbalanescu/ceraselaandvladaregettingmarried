@@ -28,7 +28,7 @@ html {
 /*----------general tags-------------------------*/
 
 body {
-  background-image: url("../Multimedia/Home.jpg");
+  background-image: url("Multimedia/bckg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -131,28 +131,6 @@ body {
   color: #66ffff;
   font-size: 1vw;
 }
-
-#submenu {
-  border: 1px solid #000000;
-  box-shadow: 3px 3px 0 #000000;
-  background-color: #001a4d;
-  z-index: 100;
-  position: fixed;
-  right: 0;
-  padding: 5px 10px;
-  margin-top: -1vw;
-}
-
-#submenu li a {
-  padding: 0;
-  font-size: 0.7vw;
-}
-
-#submenu li .listLink:hover, #submenu .current {
-  color: #66ffff;
-}
-
-
 /*----------Header----------------------------*/
 
 
