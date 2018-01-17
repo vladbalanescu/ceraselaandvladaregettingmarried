@@ -22,43 +22,23 @@ $(document).ready(function() {
     });
     // Preloader - END
 
-
-
-    // Form check
-    $("#send").click(function() {
-        // Get all empty fields in the form
-        var empty = $(this).parent().find(":text").filter(function() {
-            return this.value === "";
-        });
-
-        // Exclude undefined field
-        if ($('#antispam').value != undefined) {
-            empty.length += 1;
-        } else {
-            empty.length -= 1;
-        }
-
-        // Send only if all the fields are filled in and 1 tickbox ticked
-        if ((empty.length != 0) || ($('.checkBox:checkbox:checked').length === 0)) {
-            alert("Please fill in all the fields !")
-        } else {
-            $('#form').submit();
-        }
+    // Slide down
+    $("#downArrow").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#counter-container").offset().top
+        }, "slow");
+        return false;
     });
-    // Only 1 tickbox clicked at a time
-    $('.checkBox').click(function() {
-        $(this).siblings('input:checkbox').prop('checked', false);
-    });
-    // Form check - END
+    // Slide down - END
 
-    // Slide up
-    $("#up").click(function() {
+    // Back to top
+    $("#upArrow, #galleryButton").click(function() {
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
         return false;
     });
-    // Slide up - END
+    // Back to top - END
 
 
 

@@ -53,7 +53,7 @@ $(document).ready(function() {
             position = 0,
             css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%; }";
+        css.innerHTML += "#slidy { text-align: left; font-size: 0; position: relative; width: " + (imgCount * 100) + "%; }";
         css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }";
         css.innerHTML += "@" + keyframeprefix + "keyframes slidy {";
         for (i = 0; i < (imgCount - 1); i++) {
