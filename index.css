@@ -282,7 +282,7 @@ body {
 
 /*----------Mobile version----------------------------*/
 
-@media only screen and (max-device-width: 500px) {
+@media screen and (max-device-width: 500px) {
   body {
     background-size: 130% 200%, auto;
     -o-background-size: 130% 200%, auto;
