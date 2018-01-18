@@ -44,7 +44,7 @@ $(document).ready(function() {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
     var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24) + 1;
     var days = Math.floor(t / (1000 * 60 * 60 * 24) % 365);
     var years = Math.floor(t / (1000 * 60 * 60 * 24) / 365);
     return {
