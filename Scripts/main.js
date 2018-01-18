@@ -45,7 +45,7 @@ $(document).ready(function() {
     var seconds = 59 - t.getSeconds();
     var minutes = 59 - t.getMinutes();
     var hours = 23 - t.getHours();
-    var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365);
+    var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365) - 1;
     var years = date.getFullYear() - t.getFullYear()
     return {
       'total': t,
