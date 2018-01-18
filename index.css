@@ -9,17 +9,10 @@ html {
   height: 100%;
 }
 
+
 /*----------general tags-------------------------*/
 
 body {
-  background-image: url("Multimedia/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: 100% 100%, auto;
-  -o-background-size: 100% 100%, auto;
-  -moz-background-size: 100% 100%, auto;
-  -webkit-background-size: 100% 100%, auto;
   min-height: 100%;
   position: relative;
 }
@@ -49,6 +42,7 @@ body {
 
 /*----------Preloader-------------------------*/
 
+
 /*----------Header----------------------------*/
 
 #wraper {
@@ -69,6 +63,7 @@ body {
 
 #logoImage {
   height: 5vh;
+  width: 300px;
   margin-left: 0.5vw;
 }
 
@@ -110,16 +105,18 @@ body {
 
 #flagImage:hover {
   transform: rotate(360deg);
-  -moz-transform:rotate(360deg);
-  -webkit-transform:rotate(360deg);
-  -o-transform:rotate(360deg);
-  -ms-transform:rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -o-transition: 1s;
   -ms-transition: 1s;
   transition: 1s;
 }
+
+
 /*----------Header----------------------------*/
 
 
@@ -142,7 +139,8 @@ body {
 }
 
 #slide-overlay {
-  width: 100%;;
+  width: 100%;
+  ;
   position: absolute;
   z-index: 1000;
 }
@@ -173,10 +171,10 @@ body {
 #downArrow:hover {
   cursor: pointer;
   transform: rotate(360deg);
-  -moz-transform:rotate(360deg);
-  -webkit-transform:rotate(360deg);
-  -o-transform:rotate(360deg);
-  -ms-transform:rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -o-transition: 1s;
@@ -184,11 +182,53 @@ body {
   transition: 1s;
 }
 
-#counter-container {
-  height: 50vh;
+#counter-container, #proposal-container, #contact-container {
+  min-height: 50vh;
+  background-color: #FFE6E1;
+  padding-top: 30px;
 }
 
+#story-container, #details-container {
+  min-height: 50vh;
+  padding-top: 30px;
+}
 
+.title {
+  font-size: 60px;
+  font-family: "Monotype Corsiva", "Serif";
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+#countdown {
+  text-align: center;
+  background-color: #66a2aa;
+  font-family: "Monotype Corsiva", "Serif";
+  font-size: 70px;
+  background-color: #BFD6F9;
+  margin: 10%  20%;
+}
+
+#countdown p {
+  font-size: 50px;
+}
+
+.countdownBox {
+  display: inline-block;
+  margin: 10px 20px;
+  width: 120px;
+  background-color: #800000;
+  color: white;
+}
+
+.countdownBox div {
+  background-color: white;
+  width: 100px;
+  margin: 10px;
+  color: black;
+}
 
 
 /*----------Slide show----------------------------*/
@@ -198,7 +238,7 @@ body {
 
 #footer {
   position: absolute;
-  bottom: -10%;
+  bottom: 0;
   width: 100%;
   height: 45px;
   min-height: 45px;
@@ -233,10 +273,10 @@ body {
 #upArrow:hover {
   cursor: pointer;
   transform: rotate(360deg);
-  -moz-transform:rotate(360deg);
-  -webkit-transform:rotate(360deg);
-  -o-transform:rotate(360deg);
-  -ms-transform:rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -o-transition: 1s;
@@ -289,13 +329,11 @@ body {
     -moz-background-size: 130% 200%, auto;
     -webkit-background-size: 130% 200%, auto;
   }
-
   #slide-container, #slide-container figure img, #slide-overlay {
     height: 50vh;
   }
-
-  #footer {
-    bottom: 0;
+  #countdown {
+    margin: 10% 5%;
   }
 }
 

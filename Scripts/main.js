@@ -14,69 +14,72 @@
 ----------------------------------------------*/
 $(document).ready(function() {
 
-    // Preloader
-    $(window).load(function() {
-        $('#preloader, #preloaderText').fadeOut('slow', function() {
-            $(this).remove();
-        });
+  // Preloader
+  $(window).load(function() {
+    $('#preloader, #preloaderText').fadeOut('slow', function() {
+      $(this).remove();
     });
-    // Preloader - END
+  });
+  // Preloader - END
 
-    // Slide down
-    $("#downArrow").click(function() {
-        $("html, body").animate({
-            scrollTop: $("#counter-container").offset().top
-        }, "slow");
-        return false;
+  // Function to slide to a particular el. on the page
+  function slide(button, container) {
+    button.click(function() {
+      $("html, body").animate({
+        scrollTop: container.offset().top - 46
+      }, "slow");
+      return false;
     });
-    // Slide down - END
+  }
 
-    // Back to top
-    $("#upArrow, #galleryButton").click(function() {
-        $("html, body").animate({
-            scrollTop: 0
-        }, "slow");
-        return false;
-    });
-    // Back to top - END
+  slide($("#downArrow"), $("#counter-container"))
+  slide($("#storyButton"), $("#counter-container"))
+  slide($("#galleryButton"), $("html"))
+  slide($("#upArrow"), $("html"))
+  slide($("#proposalButton"), $("#proposal-container"))
+  slide($("#detailsButton"), $("#details-container"))
 
+  // Countdown
+  function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var days = Math.floor(t / (1000 * 60 * 60 * 24) % 365);
+    var years = Math.floor(t / (1000 * 60 * 60 * 24) / 365);
+    return {
+      'total': t,
+      'seconds': seconds,
+      'minutes': minutes,
+      'hours': hours,
+      'days': days,
+      'years': years
+    };
+  }
 
+  function initializeClock(endtime) {
+    var seconds = $("#seconds");
+    var minutes = $("#minutes");
+    var hours = $("#hours");
+    var days = $("#days");
+    var years = $("#years");
 
-    // Submenu
-    var timeout;
-    $('#submenu, .portfolioLink').hover(function() {
-        var headerHeight = $('#header').height();
-        // Cancel the transition between the link and submenu
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
 
-            $('.portfolioLink').css('color', '#66ffff');
-            $('.portfolioLink')[0].innerHTML = "Portfolio &#9650;";
-            $('#submenu').stop().animate({
-                marginTop: headerHeight
-            }, 500);
+      seconds.text(('0' + t.seconds).slice(-2));
+      minutes.text(('0' + t.minutes).slice(-2));
+      hours.text(('0' + t.hours).slice(-2));
+      days.text(t.days);
+      years.text(t.years);
 
-        }, 200); // change the HTML after 2 seconds
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
 
-    }, function() {
-
-
-        // Cancel the transition between the link and submenu
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            var headerHeight = $('#header').height();
-            //Don't change color if on any Portfolio page
-            if ($('.portfolioLink').parent().children().hasClass('current')) {
-                $('.portfolioLink').css('color', '#66ffff');
-            } else {
-                $('.portfolioLink').css('color', '#ffffff');
-            }
-            $('.portfolioLink')[0].innerHTML = "Portfolio &#9660;";
-            $('#submenu').stop().animate({
-                marginTop: -headerHeight
-            }, 500);
-
-        }, 200); // change the HTML after 2 seconds
-    });
-    //Submenu - END
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+  initializeClock('09/05/2020');
 });
