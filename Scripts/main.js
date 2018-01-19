@@ -40,13 +40,13 @@ $(document).ready(function() {
   slide($("#detailsButton"), $("#details-container"))
 
   // Countdown
-  function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24) + 1;
-    var days = Math.floor(t / (1000 * 60 * 60 * 24) % 365);
-    var years = Math.floor(t / (1000 * 60 * 60 * 24) / 365);
+  function getTimeRemaining(date) {
+    var t = new Date();
+    var seconds = 59 - t.getSeconds();
+    var minutes = 59 - t.getMinutes();
+    var hours = 23 - t.getHours();
+    var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365);
+    var years = date.getFullYear() - t.getFullYear()
     return {
       'total': t,
       'seconds': seconds,
@@ -81,5 +81,6 @@ $(document).ready(function() {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-  initializeClock('09/05/2020');
+
+  initializeClock(new Date("09/05/2020"));
 });
