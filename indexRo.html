@@ -12,8 +12,8 @@
 
 	<!--Scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="Scripts/slideShow.js"></script>
 	<script src="Scripts/main.js"></script>
+	<script src="Scripts/slideShow.js"></script>
 </head>
 
 <body>
@@ -97,31 +97,85 @@
 
 		<!--Story section-->
 		<div id="story-container">
-			<p class="title">Cum a inceput totul?</p>
+			<!--Story section-->
+			<div id="story-container">
+				<p class="title">Scurta povestioara</p>
+				<div class="descriptionBox">
+					<div class="storyBox">
+						<img src="Multimedia/cici.png" alt="" />
+						<p> Cerasela este o persoana foarte desteapta, draguta si prietenoasa care iubeste cartile de colorat, plimbarile lungi in natura, activitatile sportive
+							  si mancarea delicioasa. S-a nascut in Constanta, Romania in 1995 si l-a intalnit pe Vlad in 2006 cand amandoi aveau doar 11 ani. Ea studiaza in prezent Medicina Generala la
+								Universitatea de Medicina Generala si Farmacie, Carol Davila, Bucuresti, Romania si viseaza sa ajunga un doctor de succes, care sa ajute oamenii si
+								sa aiba grija de sanatatea si starea lor de bine. </p>
+					</div>
+					<div class="storyBox">
+						<img src="Multimedia/vlad.png" alt="" />
+						<p> Vlad este o persoana cu excelente abilitati de conducere, comunicare si negociere. S-a nascut in acelasi oras si an cu logodnica lui,
+							  unde amandoi au crescut si au copilarit impreuna, fiind chiar si colegi de scoala generala si liceu. Vlad studiaza pentru un certificat de Master
+								in Stiinta in Inteligenta Artificiala si Programare in Sheffield, Regatul Unit al Marii Britanii. Dupa facultate el viseaza sa ajunga in industrie unde
+								poate ajuta oamenii sa-si usureze munca de zi cu zi, oferindu-le solutii la diversele lor probleme tehnice. </p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--Proposal section-->
 		<div id="proposal-container">
 			<p class="title">Cererea in casatorie</p>
+			<div class="descriptionBox">
+				<div id="proposalCarBox">
+					<!--Gallery controls-->
+					<div id="galleryControls">
+						<div onclick="plusDivs(-1)"><img id="previousPic" src="Multimedia/leftArrow.png" alt="" /></div>
+						<div onclick="plusDivs(1)"><img id="nextPic" src="Multimedia/rightArrow.png" alt="" /></div>
+					</div>
+					<!--Images-->
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop1.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop2.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop3.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop4.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop5.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop6.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop7.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop8.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop9.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop10.jpg" alt="" />
+				</div>
+				<div id="proposalDescBox">
+					<p> Vlad a decis ca Cerasela ii este aleasa si jumatatea cu care vrea sa isi petreaca restul vietii la inceputul lui 2015 si a cerut-o in casatorie pe 1 Septembrie 2015 la 1400 de metrii altitudine,
+					    intr-o locatie montana superba - Cota 1400, Sinaia, Romania. Dupa doar 2 ani de frumoasa relatie, cei doi au realizat ca sunt facuti unul pentru
+						  celalalt si Cerasela a spus "Da" imediat intr-o insorita zi de toamna. Inca din acel moment se bucura de viata ca un cuplu logodit, care asteapta
+						  cu nerabdare ziua cea mare. Ei au fost deja in numeroase vacante impreuna atat in tara cat si in afara tarii, cateva dintre acestea fiind: Manchester, Liverpool,
+						  Hayling Island, Creta, Ranca, Sibiu, Durau, Busteni si lista poate continua. Au petrecut momente de vis impreuna si au decis sa-si lege destinele pentru totdeauna pe 5 Septembrie 2020.</p>
+				</div>
+			</div>
 		</div>
 
 		<!--Details section-->
 		<div id="details-container">
 			<p class="title">Detalii</p>
+			<div class="descriptionBox">
+				<p> Deocamdata stabilim toate detaliile pentru marea zi. Urmariti acest website pentru ultimele noutati!</p>
+			</div>
+
 		</div>
 
 		<!--Contact section-->
 		<div id="contact-container">
 			<p class="title">Contact</p>
+			<div class="descriptionBox">
+				<p>Ne puteti contacta la: <b>+44 (0) 756 298 4151</b> & <b>+40 (0) 735 022 344</b> & <b>vlad_balanescu@yahoo.com</b></p>
+			</div>
+
 		</div>
 
 		<!---Footer-->
 		<div id="footer">
 			<img id="upArrow" src="Multimedia/upArrow.png">
 			<p id="footerText"> &copy; Vlad Balanescu | Wedding Website | Toate drepturile rezervate | 2018</p>
-			<p id="footerText2"> Ultima modificare pe 28 Ianuarie 2018</p>
+			<p id="footerText2"> Ultima modificare pe 22 Ianuarie 2018</p>
 		</div>
 	</div>
+	<script src="Scripts/gallery.js"></script>
 </body>
-
 </html>

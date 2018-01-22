@@ -100,7 +100,7 @@ body {
 #flagImage {
   width: 30px;
   height: 20px;
-  margin-right: 1vw;
+  margin-right: 0.5vw;
 }
 
 #flagImage:hover {
@@ -140,7 +140,6 @@ body {
 
 #slide-overlay {
   width: 100%;
-  ;
   position: absolute;
   z-index: 1000;
 }
@@ -182,15 +181,21 @@ body {
   transition: 1s;
 }
 
+
+/*----------Slide show----------------------------*/
+
+
+/*---------- Main content ----------------------------*/
+
 #counter-container, #proposal-container, #contact-container {
   min-height: 50vh;
   background-color: #FFE6E1;
-  padding-top: 30px;
+  padding: 50px 0;
 }
 
 #story-container, #details-container {
   min-height: 50vh;
-  padding-top: 30px;
+  padding: 30px 0;
 }
 
 .title {
@@ -208,7 +213,7 @@ body {
   font-family: "Monotype Corsiva", "Serif";
   font-size: 70px;
   background-color: #BFD6F9;
-  margin: 10%  20% 0 20%;
+  margin: 10% 20% 0 20%;
 }
 
 #countdown p {
@@ -230,15 +235,85 @@ body {
   color: black;
 }
 
+.descriptionBox {
+  margin: 2% 0 0 10%;
+  transform: translateX(-5%);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-/*----------Slide show----------------------------*/
+.descriptionBox p {
+  font-family: "Monotype Corsiva", "Serif";
+  font-size: 30px;
+  margin-top: 2%;
+  text-align: justify;
+}
+
+.storyBox {
+  display: inline-block;
+  width: 45%;
+  margin-left: 3%;
+}
+
+.storyBox img {
+  width: 30%;
+  height: 30%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+#proposalCarBox {
+  width: 30%;
+  height: 30%;
+  margin-right: 5%;
+  position: relative;
+  border-radius: 20px;
+}
+
+.galleryPic {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#galleryControls {
+  width: 100%;
+  margin-top: 50%;
+  position: absolute;
+}
+
+#previousPic {
+  float: left;
+  clear: both;
+  cursor: pointer;
+  width: 2vw;
+  height: 2vw;
+}
+
+#nextPic {
+  float: right;
+  cursor: pointer;
+  width: 2vw;
+  height: 2vw;
+}
+
+#proposalDescBox {
+  width: 60%;
+  height: 100%;
+}
+
+
+/*---------- Main content ----------------------------*/
 
 
 /*--Footer-------------------------------------*/
 
 #footer {
   position: absolute;
-  bottom: 0;
+  bottom: -0.5px;
   width: 100%;
   height: 45px;
   min-height: 45px;

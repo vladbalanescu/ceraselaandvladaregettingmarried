@@ -12,8 +12,8 @@
 
 	<!--Scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="Scripts/slideShow.js"></script>
 	<script src="Scripts/main.js"></script>
+	<script src="Scripts/slideShow.js"></script>
 </head>
 
 <body>
@@ -97,21 +97,71 @@
 		<!--Story section-->
 		<div id="story-container">
 			<p class="title">Short Story</p>
+			<div class="descriptionBox">
+				<div class="storyBox">
+					<img src="Multimedia/cici.png" alt="" />
+					<p> Cerasela is a very smart, kind and approachable person who loves coloring books, long nature walks, sports activities
+					    and good, tasty foods. She was born in Constanta, Romania in 1995 and met Vlad in 2006 when they were both only 11. She is
+						  currently studying General Medicine at Carol Davila University of Medicine and Pharmacy, Bucharest, Romania and aspiring to
+							be a great medic and daily help people take care of themselves and assist them with any health concers they might have. </p>
+				</div>
+				<div class="storyBox">
+					<img src="Multimedia/vlad.png" alt="" />
+					<p> Vlad is a very focused person with well developed leadership, communication and negotiation skills. He was born in the same city
+					    and year as his fiancee and they also grew up in the same neighbourhood. Vlad is currently studying for a Master in Science
+						  degree in Artificial Intelligence and Computer Science at the University of Sheffield, United Kingdom and aspiring to finish his
+						  studies and go into industry to help people ease their daily activities by providing unique and efficient solutions to any technical problems they're facing. </p>
+				</div>
+			</div>
 		</div>
 
 		<!--Proposal section-->
 		<div id="proposal-container">
 			<p class="title">The Proposal</p>
+			<div class="descriptionBox">
+				<div id="proposalCarBox">
+					<!--Gallery controls-->
+					<div id="galleryControls">
+						<div onclick="plusDivs(-1)"><img id="previousPic" src="Multimedia/leftArrow.png" alt="" /></div>
+						<div onclick="plusDivs(1)"><img id="nextPic" src="Multimedia/rightArrow.png" alt="" /></div>
+					</div>
+					<!--Images-->
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop1.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop2.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop3.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop4.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop5.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop6.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop7.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop8.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop9.jpg" alt="" />
+					<img class="galleryPic" src="Multimedia/ProposalSlides/Prop10.jpg" alt="" />
+				</div>
+				<div id="proposalDescBox">
+					<p> Vlad decided that Cerasela is the chosen one, his soul mate in early 2015 and proposed to her on the 1<sup>st</sup> of September 2015 at 1400m height
+					    in a wonderful mountain location - Cota 1400m, Sinaia, Romania. After just 2 years of intense relationship, the two decided they're made
+						  for each other and Cerasela said "Yes!" straight away on a bright Autumn day. Ever since they're enjoying life as an engagged couple and they're
+						  both anxiously waiting for the big day. They've already been in plenty holidays together in both home and abroad locations, few of which are: Manchester,
+						  Liverpool, Hayling Island, Crete, Ranca, Sibiu, Durau, Busteni and the list goes on and on. They've spent wonderful moments together and decided
+						  to tie their destinies forever on the 5<sup>th</sup> of September 2020. </p>
+				</div>
+			</div>
 		</div>
 
 		<!--Details section-->
 		<div id="details-container">
 			<p class="title">Details</p>
+			<div class="descriptionBox">
+				<p>We are currently setting up all needed arangements, so stay tunned for more wedding updates!</p>
+			</div>
 		</div>
 
 		<!--Contact section-->
 		<div id="contact-container">
 			<p class="title">Contact</p>
+			<div class="descriptionBox">
+				<p>You can currently contact us on: <b>+44 (0) 756 298 4151</b> & <b>+40 (0) 735 022 344</b> & <b>vlad_balanescu@yahoo.com</b></p>
+			</div>
 		</div>
 
 
@@ -120,9 +170,9 @@
 		<div id="footer">
 			<img id="upArrow" src="Multimedia/upArrow.png">
 			<p id="footerText"> &copy; Vlad Balanescu | Wedding Website | All rights reserved | 2018</p>
-			<p id="footerText2"> Last updated on 28<sup>th</sup> of January 2018</p>
+			<p id="footerText2"> Last updated on 22<sup>nd</sup> of January 2018</p>
 		</div>
 	</div>
+<script src="Scripts/gallery.js"></script>
 </body>
-
 </html>
