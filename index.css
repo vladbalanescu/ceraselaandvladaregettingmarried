@@ -241,7 +241,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  align-items: ce;
+  align-items: center;
   justify-content: center;
 }
 
@@ -259,15 +259,15 @@ body {
 }
 
 .storyBox img {
-  width: 30%;
-  height: 30%;
+  width: 200px;
+  height: 200px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 
 #proposalCarBox {
-  width: 30%;
-  height: 30%;
+  width: 500px;
+  height: 500px;
   margin-right: 5%;
   position: relative;
   border-radius: 20px;
