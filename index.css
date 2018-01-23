@@ -211,26 +211,26 @@ body {
   text-align: center;
   background-color: #66a2aa;
   font-family: "Monotype Corsiva", "Serif";
-  font-size: 70px;
+  font-size: 60px;
   background-color: #BFD6F9;
   margin: 10% 20% 0 20%;
 }
 
 #countdown p {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .countdownBox {
   display: inline-block;
   margin: 10px 20px;
-  width: 120px;
+  min-width: 120px;
   background-color: #800000;
   color: white;
 }
 
 .countdownBox div {
   background-color: white;
-  width: 100px;
+  min-width: 100px;
   margin: 10px;
   color: black;
 }
@@ -241,7 +241,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: ce;
   justify-content: center;
 }
 
