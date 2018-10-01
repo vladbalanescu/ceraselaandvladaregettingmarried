@@ -46,7 +46,7 @@ $(document).ready(function() {
     var minutes = 59 - t.getMinutes();
     var hours = 23 - t.getHours();
     var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365) - 1;
-    var years = date.getFullYear() - t.getFullYear()
+    var years = date.getFullYear() - t.getFullYear() - 1
     return {
       'total': t,
       'seconds': seconds,
@@ -82,5 +82,5 @@ $(document).ready(function() {
     var timeinterval = setInterval(updateClock, 1000);
   }
 
-  initializeClock(new Date("09/05/2020"));
+  initializeClock(new Date("09/01/2019"));
 });

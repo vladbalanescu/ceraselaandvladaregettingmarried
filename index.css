@@ -13,8 +13,16 @@ html {
 /*----------general tags-------------------------*/
 
 body {
-  min-height: 100%;
-  position: relative;
+background-image: url("Multimedia/bckg_drop.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: 100% 100%, auto;
+-o-background-size: 100% 100%, auto;
+-moz-background-size: 100% 100%, auto;
+-webkit-background-size: 100% 100%, auto;
+min-height: 100%;
+position: relative;
 }
 
 
@@ -189,12 +197,13 @@ body {
 
 #counter-container, #proposal-container, #contact-container {
   min-height: 50vh;
-  background-color: #FFE6E1;
   padding: 50px 0;
+  color: white;
 }
 
 #story-container, #details-container {
   min-height: 50vh;
+  background-image: url("Multimedia/papyrus.jpg");
   padding: 30px 0;
 }
 
@@ -209,10 +218,9 @@ body {
 
 #countdown {
   text-align: center;
-  background-color: #66a2aa;
+  background-image: url("Multimedia/papyrus.jpg");
   font-family: "Monotype Corsiva", "Serif";
   font-size: 60px;
-  background-color: #BFD6F9;
   margin: 10% 20% 0 20%;
 }
 
