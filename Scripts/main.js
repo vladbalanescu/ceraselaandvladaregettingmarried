@@ -45,10 +45,9 @@ $(document).ready(function() {
     var seconds = 59 - t.getSeconds();
     var minutes = 59 - t.getMinutes();
     var hours = 23 - t.getHours();
-    var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365) - 1;
+    var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365);
     var years = date.getFullYear() - t.getFullYear() - 1
     return {
-      'total': t,
       'seconds': seconds,
       'minutes': minutes,
       'hours': hours,
@@ -73,7 +72,7 @@ $(document).ready(function() {
       days.text(t.days);
       years.text(t.years);
 
-      if (t.total <= 0) {
+      if (t.days == 0 && t.hours == 0 && t.minutes == 0 && t.seconds == 0 ) {
         clearInterval(timeinterval);
       }
     }
