@@ -17,10 +17,10 @@ background-image: url("Multimedia/bckg_drop.jpg");
 background-repeat: no-repeat;
 background-position: center center;
 background-attachment: fixed;
-background-size: 100% 100%, auto;
--o-background-size: 100% 100%, auto;
--moz-background-size: 100% 100%, auto;
--webkit-background-size: 100% 100%, auto;
+background-size: 100% 150%, auto;
+-o-background-size: 100% 150%, auto;
+-moz-background-size: 100% 150%, auto;
+-webkit-background-size: 100% 150%, auto;
 min-height: 100%;
 position: relative;
 }
