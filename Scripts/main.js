@@ -46,7 +46,7 @@ $(document).ready(function() {
     var minutes = 59 - t.getMinutes();
     var hours = 23 - t.getHours();
     var days = Math.floor((date - t) / (1000 * 60 * 60 * 24) % 365);
-    var years = date.getFullYear() - t.getFullYear() - 1
+    var years = days / 365 ;
     return {
       'seconds': seconds,
       'minutes': minutes,
@@ -66,14 +66,19 @@ $(document).ready(function() {
     function updateClock() {
       var t = getTimeRemaining(endtime);
 
-      seconds.text(('0' + t.seconds).slice(-2));
-      minutes.text(('0' + t.minutes).slice(-2));
-      hours.text(('0' + t.hours).slice(-2));
-      days.text(t.days);
-      years.text(t.years);
-
-      if (t.days == 0 && t.hours == 0 && t.minutes == 0 && t.seconds == 0 ) {
-        clearInterval(timeinterval);
+      // Don't let any value go under zero
+      if(t.days < 0 ) {
+        years.text("0");
+        days.text("0");
+        minutes.text("0");
+        hours.text("0");
+        seconds.text("0");
+      } else {
+        seconds.text(('0' + t.seconds).slice(-2));
+        minutes.text(('0' + t.minutes).slice(-2));
+        hours.text(('0' + t.hours).slice(-2));
+        days.text(t.days);
+        years.text(t.years);
       }
     }
 
